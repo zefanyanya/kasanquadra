@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
+
+input[type="radio"] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  max-height: 400px;
+  height: 100%;
+  /* transform-style: preserve-3d; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+}
+
+.containerfooter {
+  width: 100%;
+  /* max-width: 900px; */
+  /* max-height: 400px; */
+  /* height: 100%; */
+  /* transform-style: preserve-3d; */
+  display: flex;
+  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.gambarcarousel {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+#item-1:checked ~ .cards #song-3,
+#item-2:checked ~ .cards #song-1,
+#item-3:checked ~ .cards #song-2 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-2,
+#item-2:checked ~ .cards #song-3,
+#item-3:checked ~ .cards #song-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #song-1,
+#item-2:checked ~ .cards #song-2,
+#item-3:checked ~ .cards #song-3 {
+  transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+
+  img {
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+}
+
+/* navbar */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600&display=swap");
+/* START NAVBAR */
+
+.navbar {
+  color: #fff !important;
+  background-color: #0c1d3d !important;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.navbar .dropdown-item:hover {
+  background-color: transparent !important;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none !important;
+}
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+.navbar .navbar-light .navbar-toggler {
+  border: none !important;
+}
+.navbar .navbar-toggler-icon {
+  background-image: url(asset/group.png) !important;
+}
+.navbar .navbar-toggler-icon {
+  width: 1em !important;
+  height: 1em !important;
+}
+.navbar .dropdown-menu {
+  background-color: transparent !important;
+  color: #fff;
+  border: none !important;
+}
+.navbar .dropdown-item {
+  color: #fff !important;
+}
+
+@media (min-width: 991.5px) {
+  .navbar .dropdown-menu {
+    background-color: #391459 !important;
+    color: #fff;
+    border: none !important;
+  }
+}
+@media (max-width: 991.5px) {
+  .navbar .dropdown-menu {
+    background-color: transparent !important;
+    color: #fff;
+    border: none !important;
+  }
+}
+@media (min-width: 991.5px) {
+  .navbar .dropdown-menu {
+    background-color: #ffffff !important;
+    color: #fff;
+    border: none !important;
+    margin-left: -75px !important;
+  }
+  nav .nav-item {
+    margin-left: 1.5rem !important;
+    margin-right: 1.5rem !important;
+  }
+}
+@media (max-width: 991.5px) {
+  .navbar .dropdown-menu {
+    background-color: transparent !important;
+    color: #fff;
+    border: none !important;
+  }
+}
+
+/* END NAVBAR */
+
+.carouselpic {
+  margin-top: 150px !important;
+}
+
+body {
+  margin: auto;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: auto;
+  background: linear-gradient(
+    315deg,
+    rgb(174, 174, 174) 3%,
+    rgb(255, 255, 255) 38%,
+    rgb(155, 155, 155) 68%,
+    rgb(254, 254, 254) 98%
+  );
+  animation: gradient 10s ease infinite;
+  background-size: 400% 400%;
+  background-attachment: fixed;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.wave {
+  background: rgb(255 255 255 / 25%);
+  border-radius: 1000% 1000% 0 0;
+  position: fixed;
+  width: 200%;
+  height: 12em;
+  animation: wave 10s -3s linear infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  bottom: -1.25em;
+  animation: wave 18s linear reverse infinite;
+  opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+  bottom: -2.5em;
+  animation: wave 10s -1s reverse infinite;
+  opacity: 0.9;
+}
+
+@keyframes wave {
+  2% {
+    transform: translateX(1);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  75% {
+    transform: translateX(-25%);
+  }
+
+  100% {
+    transform: translateX(1);
+  }
+}
+
+@media (max-width: 991.5px) {
+  .desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .mobile {
+    display: none !important;
+  }
+}
+
+.banner .hero-bg {
+  /* background: linear-gradient(to right, #0c1d3d, #132952, #323562, #a3a0bd); */
+  min-height: 400px;
+  background-image: url(asset/2.jpg);
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.banner .hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  color: #fff;
+}
+
+.banner .hero-title {
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.banner .hero-title-img {
+  width: 6rem;
+  opacity: 50%;
+}
+.tentangbg {
+  font-family: "Raleway", sans-serif;
+}
+
+.buttonlogin {
+  background-color: rgb(128, 128, 128); /* Green */
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 100px;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: rgb(128, 128, 128);
+  color: black;
+  border: 2px solid grey;
+}
+.button1:hover {
+  background-color: white;
+  color: grey;
+}
+
+.px {
+  padding-right: 200px;
+  padding-left: 30px;
+}
+
+#item {
+  border-radius: 50px;
+}
+
+#song-2 {
+  border-radius: 50px;
+}
+
+#song-3 {
+  border-radius: 50px;
+}
